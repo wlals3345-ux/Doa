@@ -13,8 +13,8 @@ import static com.example.doa.service.Database.number;
 
 @Service
 public class DoaService {
-    private final Database db; private final PasswordEncoder passwords;
-    public DoaService(Database db,PasswordEncoder passwords) {this.db=db;this.passwords=passwords;}
+    private final Database db; private final PasswordEncoder passwords; private final com.example.doa.config.MoodCatalogue catalogue;
+    public DoaService(Database db,PasswordEncoder passwords,com.example.doa.config.MoodCatalogue catalogue) {this.db=db;this.passwords=passwords;this.catalogue=catalogue;}
     public static ResponseStatusException error(int status,String message) {return new ResponseStatusException(HttpStatus.valueOf(status),message);}
     public static void validatePassword(String password) {
         if(password.getBytes(StandardCharsets.UTF_8).length>72)throw error(400,"비밀번호는 UTF-8 기준 72바이트 이하여야 합니다.");
@@ -49,7 +49,7 @@ public class DoaService {
         for(Map<String,Object> p:db.rows("SELECT p.*,c.category_name FROM product p JOIN category c ON c.category_id=p.category_id ORDER BY product_id")) {
             Map<String,Object> item=new LinkedHashMap<>();item.put("id",p.get("product_id"));item.put("cat",p.get("category_name"));
             item.put("name",p.get("name"));item.put("price",p.get("price"));item.put("img",p.get("image"));item.put("description",p.get("description"));
-            item.put("variants",db.rows("SELECT variant_id,color,size,stock FROM product_variant WHERE product_id=? ORDER BY variant_id",p.get("product_id")));result.add(item);
+            item.put("variants",db.rows("SELECT variant_id,color,size,stock FROM product_variant WHERE product_id=? ORDER BY variant_id",p.get("product_id")));catalogue.enrich(item);result.add(item);
         }return result;
     }
     public List<Map<String,Object>> cart(long id) {

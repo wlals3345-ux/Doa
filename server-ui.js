@@ -28,12 +28,13 @@ const originalDetail=detail;
 detail=function(id){
   originalDetail(id);const p=products.find(x=>x.id===id);if(!p)return;
   const el=document.querySelector('#options');el.insertAdjacentHTML('beforeend','<p id="stock" class="muted"></p><p class="error"></p>');
+  el.elements.color.innerHTML=`<option value="">${t('색상을 선택하세요')}</option>`+[...new Set(p.variants.map(v=>v.color))].map(color=>`<option value="${esc(color)}">${esc(t(color))}</option>`).join('');
   el.elements.color.onchange=()=>{el.elements.size.innerHTML=`<option value="">${t('사이즈를 선택하세요')}</option>`+p.variants.filter(v=>v.color===el.elements.color.value).map(v=>`<option value="${esc(v.size)}" ${v.stock===0?'disabled':''}>${esc(t(v.size))}${v.stock===0?' / '+t('품절'):''}</option>`).join('');document.querySelector('#stock').textContent='';};
   el.elements.size.innerHTML=`<option value="">${t('사이즈를 선택하세요')}</option>`;
   el.elements.size.onchange=()=>{const v=p.variants.find(v=>v.color===el.elements.color.value&&v.size===el.elements.size.value);document.querySelector('#stock').textContent=v?t('재고')+' '+v.stock:'';};
   form('options',async(d,e)=>{if(!needLogin())return;applyState(await api('/cart','POST',{productId:id,color:d.get('color'),size:d.get('size'),quantity:1}));if(e.submitter.value==='buy')go('checkout');else toast(t('장바구니에 담았습니다.'));});
   // Shipping thresholds are stored in KRW, but displayed in the selected currency.
-  const details=app.querySelectorAll('details p');details[1].textContent=`${t('배송비')} ${money(3000)} · ${money(100000)} ${t('이상 무료배송')}`;
+  const details=app.querySelectorAll('details p');if(p.sizeGuideKo)details[0].textContent=language==='ja'?p.sizeGuideJa:p.sizeGuideKo;details[1].textContent=`${t('배송비')} ${money(3000)} · ${money(100000)} ${t('이상 무료배송')}`;
 };
 function cartPage(){
   if(!needLogin())return;

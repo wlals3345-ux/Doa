@@ -13,3 +13,22 @@ html[lang="ja"] .logo .logo-en{font-size:12px;font-weight:500;letter-spacing:1px
 button:disabled{opacity:.5;cursor:wait}
 [hidden]{display:none!important}
 #language{font-size:11px;padding:7px 5px;max-width:84px;border-color:#e5e5e5;letter-spacing:0}html[lang="ja"] body{font-family:Inter,"Noto Sans JP","Yu Gothic","Meiryo",sans-serif}html[lang="ja"] nav,html[lang="ja"] .utilities{gap:18px;letter-spacing:0}@media(max-width:720px){html[lang="ja"] nav{gap:14px}html[lang="ja"] .utilities{gap:10px}#language{max-width:74px;font-size:10px}}
+
+/* Original DOA campaign photography: keep the model and copy clear at every width. */
+.hero.campaign-hero{display:block;position:relative;min-height:0;isolation:isolate;background:#b3b4b1}
+.campaign-hero .hero-art{display:block;min-height:0;aspect-ratio:16/9;background:#b3b4b1}
+.campaign-hero .hero-art:before{display:none}
+.campaign-hero .hero-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;mix-blend-mode:normal}
+.campaign-hero .hero-copy{position:absolute;inset:0 auto 0 0;width:45%;padding:5% 11%;padding-right:0;z-index:1}
+.campaign-hero h1{font-size:clamp(36px,4.6vw,72px)}
+.campaign-hero p{color:#242424}
+.campaign-hero .art-label{left:auto;right:4%;bottom:22px;font-size:9px;color:#222}
+@media(max-width:720px){
+.campaign-hero .hero-art{aspect-ratio:4/5}
+.campaign-hero .hero-art img{object-position:66% center}
+.campaign-hero .hero-copy{position:relative;width:100%;padding:32px 7% 38px;background:var(--paper)}
+.campaign-hero h1{font-size:42px;margin-bottom:18px}
+.campaign-hero .eyebrow{margin-bottom:16px}
+.campaign-hero p{margin:0 0 22px}
+.campaign-hero .art-label{bottom:auto;top:18px;right:5%;font-size:8px}
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "slug":"arc-seam-leather","category":"OUTER","name":"Arc Seam Cropped Leather Jacket","nameKo":"아크 절개 크롭 레더 재킷","nameJa":"アークシーム クロップドレザージャケット","price":219000,
+    "descriptionKo":"곡선 패널과 사선 지퍼로 형태를 잡은 크롭 재킷. 넓은 어깨와 짧은 밑단, 길게 떨어지는 소매가 워싱 데님과 대비를 이룹니다.",
+    "descriptionJa":"曲線パネルと斜めのジッパーで形を描くクロップドジャケット。広い肩と短い裾、長めの袖がウォッシュデニムと対照をつくります。",
+    "sizeGuideKo":"S / M / L · 짧은 기장과 여유 있는 어깨의 실루엣. 이미지와 옵션은 포트폴리오용 가상 상품이며 실제 실측 정보는 제공하지 않습니다.",
+    "sizeGuideJa":"S / M / L · 短い着丈とゆとりのある肩。画像と選択肢はポートフォリオ用の架空商品で、実寸情報はありません。",
+    "colors":["WASHED BLACK"],"sizes":["S","M","L"]
+  },
+  {
+    "slug":"shaggy-funnel-jacket","category":"OUTER","name":"Shaggy Funnel Cropped Jacket","nameKo":"샤기 퍼널 크롭 재킷","nameJa":"シャギーファネル クロップドジャケット","price":189000,
+    "descriptionKo":"높게 감싸는 퍼널넥과 풍성한 샤기 텍스처, 둥근 소매가 중심이 되는 재킷. 비대칭 여밈과 짧은 밑단으로 부피감에 균형을 더했습니다.",
+    "descriptionJa":"高いファネルネック、豊かなシャギーの質感、丸みのある袖が特徴。非対称の開閉と短い裾でボリュームにバランスを加えています。",
+    "sizeGuideKo":"OS · 볼륨 있는 소매와 크롭 실루엣. 이미지와 옵션은 포트폴리오용 가상 상품이며 실제 실측 정보는 제공하지 않습니다.",
+    "sizeGuideJa":"OS · ボリューム袖とクロップドシルエット。画像と選択肢はポートフォリオ用の架空商品で、実寸情報はありません。",
+    "colors":["CHARCOAL"],"sizes":["OS (ONE SIZE)"]
+  },
+  {
+    "slug":"twist-boatneck-top","category":"TOP","name":"Twist Boatneck Layered Top","nameKo":"트위스트 보트넥 레이어드 탑","nameJa":"ツイストボートネック レイヤードトップ","price":79000,
+    "descriptionKo":"비대칭 보트넥에서 시작되는 꼬임과 사선 드레이프. 곡선 절개, 길게 주름지는 소매와 비스듬한 밑단으로 단순한 기본 티와 다른 표정을 만듭니다.",
+    "descriptionJa":"非対称のボートネックから続くツイストと斜めのドレープ。曲線の切替、長い袖のギャザー、斜めの裾が独特な表情をつくります。",
+    "sizeGuideKo":"S / M / L · 몸선을 따라 떨어지는 슬림 실루엣. 이미지와 옵션은 포트폴리오용 가상 상품이며 실제 실측 정보는 제공하지 않습니다.",
+    "sizeGuideJa":"S / M / L · ボディラインに沿うスリムシルエット。画像と選択肢はポートフォリオ用の架空商品で、実寸情報はありません。",
+    "colors":["SMOKE GREY"],"sizes":["S","M","L"]
+  },
+  {
+    "slug":"layered-seam-top","category":"TOP","name":"Offset Seam Layered Top","nameKo":"오프셋 심 레이어드 탑","nameJa":"オフセットシーム レイヤードトップ","price":89000,
+    "descriptionKo":"에스프레소와 다크 그레이의 겹친 넥라인, 랩 형태의 전면과 사이드 셔링. 드러난 곡선 절개와 작은 실버 링이 디테일을 더합니다.",
+    "descriptionJa":"エスプレッソとダークグレーの重なるネックライン、ラップ風のフロントとサイドギャザー。曲線のシームと小さなシルバーリングがアクセント。",
+    "sizeGuideKo":"S / M / L · 슬림한 바디와 긴 소매. 이미지와 옵션은 포트폴리오용 가상 상품이며 실제 실측 정보는 제공하지 않습니다.",
+    "sizeGuideJa":"S / M / L · スリムな身頃と長い袖。画像と選択肢はポートフォリオ用の架空商品で、実寸情報はありません。",
+    "colors":["ESPRESSO"],"sizes":["S","M","L"]
+  },
+  {
+    "slug":"arc-panel-denim","category":"PANTS","name":"Arc Panel Washed Denim","nameKo":"아크 패널 워싱 데님","nameJa":"アークパネル ウォッシュデニム","price":139000,
+    "descriptionKo":"곡선으로 이어지는 옆선과 무릎 다트로 입체적인 볼륨을 만든 데님. 빛바랜 블루 워싱과 길게 접힌 밑단을 슬림한 상의에 매치해 보세요.",
+    "descriptionJa":"曲線のサイドパネルと膝のダーツで立体的なボリュームをつくるデニム。色褪せたブルーと長めの折り返しを、スリムなトップスと合わせて。",
+    "sizeGuideKo":"26 / 28 / 30 · 여유 있는 곡선형 와이드 레그. 이미지와 옵션은 포트폴리오용 가상 상품이며 실제 실측 정보는 제공하지 않습니다.",
+    "sizeGuideJa":"26 / 28 / 30 · ゆとりのあるカーブワイドレッグ。画像と選択肢はポートフォリオ用の架空商品で、実寸情報はありません。",
+    "colors":["VINTAGE BLUE"],"sizes":["26","28","30"]
+  },
+  {
+    "slug":"belted-flare-denim","category":"PANTS","name":"Offset Belted Flare Denim","nameKo":"오프셋 벨티드 플레어 데님","nameJa":"オフセットベルテッド フレアデニム","price":149000,
+    "descriptionKo":"겹쳐지는 허리 패널과 얇은 더블 벨트, 길게 흐르는 곡선 절개. 스모키한 워싱과 퍼지는 밑단으로 부츠 위에 떨어지는 실루엣을 구성했습니다.",
+    "descriptionJa":"重なるウエストパネル、細いダブルベルト、長く流れる曲線の切替。スモーキーなウォッシュと広がる裾がブーツの上に落ちるシルエットを描きます。",
+    "sizeGuideKo":"26 / 28 / 30 · 허벅지는 슬림하게, 밑단은 길게 퍼지는 형태. 이미지와 옵션은 포트폴리오용 가상 상품이며 실제 실측 정보는 제공하지 않습니다.",
+    "sizeGuideJa":"26 / 28 / 30 · 太ももはスリム、裾は長く広がる形。画像と選択肢はポートフォリオ用の架空商品で、実寸情報はありません。",
+    "colors":["FADED BLACK"],"sizes":["26","28","30"]
+  },
+  {
+    "slug":"offset-wrap-skirt","category":"SKIRT","name":"Offset Pleated Wrap Skirt","nameKo":"오프셋 플리츠 랩 스커트","nameJa":"オフセットプリーツ ラップスカート","price":129000,
+    "descriptionKo":"정돈된 랩 패널 아래로 이어지는 잔잔한 플리츠와 불규칙한 밑단. 비대칭 허리선과 버클을 포인트로, 팬츠 위에 레이어드해도 좋은 스커트입니다.",
+    "descriptionJa":"すっきりしたラップパネルから続く細かなプリーツと不規則な裾。非対称のウエストとバックルが特徴で、パンツとのレイヤードにも。",
+    "sizeGuideKo":"S / M / L · 랩 형태의 미디 실루엣. 이미지와 옵션은 포트폴리오용 가상 상품이며 실제 실측 정보는 제공하지 않습니다.",
+    "sizeGuideJa":"S / M / L · ラップ型のミディシルエット。画像と選択肢はポートフォリオ用の架空商品で、実寸情報はありません。",
+    "colors":["BLACK"],"sizes":["S","M","L"]
+  },
+  {
+    "slug":"sculpt-buckle-bag","category":"ACC","name":"Sculpt Buckle Shoulder Bag","nameKo":"스컬프 버클 숄더백","nameJa":"スカルプバックル ショルダーバッグ","price":119000,
+    "descriptionKo":"비대칭 초승달 형태와 접힌 측면 구조, 곡선 지퍼 포켓. 가느다란 더블 스트랩과 브러시드 실버 버클로 코디에 입체적인 포인트를 더합니다.",
+    "descriptionJa":"非対称のクレセント型、折り込んだサイド、曲線のジップポケット。細いダブルストラップとシルバーバックルが立体的なアクセントを加えます。",
+    "sizeGuideKo":"OS · 숄더 스트랩의 구조를 보여주는 가상 상품입니다. 실제 크기·수납량·소재 사양은 제공하지 않습니다.",
+    "sizeGuideJa":"OS · ショルダーストラップの構造を表現した架空商品です。実寸、収納量、素材仕様はありません。",
+    "colors":["WASHED BLACK"],"sizes":["OS (ONE SIZE)"]
+  }
+]

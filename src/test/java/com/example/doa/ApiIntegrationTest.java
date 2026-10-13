@@ -24,6 +24,8 @@ import static org.mockito.Mockito.*;
 @AutoConfigureMockMvc
 class ApiIntegrationTest {
     @Autowired MockMvc mvc; @Autowired ObjectMapper json;
+    @Autowired com.example.doa.config.MoodCollectionSeed moodSeed;
+    @Autowired com.example.doa.service.Database database;
     @MockBean JavaMailSender mail;
     @DynamicPropertySource static void db(DynamicPropertyRegistry r) {
         r.add("spring.datasource.url",()->System.getenv().getOrDefault("DOA_TEST_DB_URL","jdbc:h2:mem:doatest;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1"));
@@ -102,6 +104,19 @@ class ApiIntegrationTest {
         Client a=new Client();a.signup();
         a.call("POST","/outfits",Map.of("title","Post","text","Text","image","data:image/png;base64,SGVsbG8=","tags",List.of()),400);
         a.call("POST","/outfits",Map.of("title","   ","text","Text","image","assets/outer-0.svg","tags",List.of()),400);
+    }
+    @Test void moodCollectionIsIdempotentAndProvidesAccurateOptions() throws Exception {
+        Client a=new Client();JsonNode products=a.refresh().path("products");
+        assertEquals(32,products.size());
+        var jacket=java.util.stream.StreamSupport.stream(products.spliterator(),false).filter(p->p.path("name").asText().equals("Arc Seam Cropped Leather Jacket")).findFirst().orElseThrow();
+        assertEquals("아크 절개 크롭 레더 재킷",jacket.path("nameKo").asText());assertTrue(jacket.path("featured").asBoolean());
+        assertEquals(3,jacket.path("variants").size());assertEquals("WASHED BLACK",jacket.path("variants").get(0).path("color").asText());
+        long product=jacket.path("id").asLong();long variant=jacket.path("variants").get(0).path("variant_id").asLong();
+        database.exec("UPDATE product_variant SET stock=17 WHERE variant_id=?",variant);
+        moodSeed.run(new org.springframework.boot.DefaultApplicationArguments(new String[0]));
+        var again=a.refresh().path("products");assertEquals(32,again.size());assertEquals(17,findVariant(a.refresh(),product,"WASHED BLACK","S").path("stock").asInt());
+        a.signup();a.call("POST","/cart",Map.of("productId",product,"color","IVORY","size","M","quantity",1),400);
+        a.call("POST","/cart",Map.of("productId",product,"color","WASHED BLACK","size","M","quantity",1),200);
     }
     static JsonNode findPost(JsonNode state,long id){for(JsonNode p:state.path("posts"))if(p.path("id").asLong()==id)return p;throw new AssertionError("Post missing");}
     static JsonNode findVariant(JsonNode state,long id,String color,String size){for(JsonNode p:state.path("products"))if(p.path("id").asLong()==id)for(JsonNode v:p.path("variants"))if(v.path("color").asText().equals(color)&&v.path("size").asText().equals(size))return v;throw new AssertionError("Variant missing");}

@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import static com.example.doa.service.Database.number;
 
 @Component
+@org.springframework.core.annotation.Order(0)
 public class SeedData implements ApplicationRunner {
     private final Database db;
     public SeedData(Database db){this.db=db;}
