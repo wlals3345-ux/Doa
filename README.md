@@ -55,8 +55,6 @@ Java 21, Spring Boot 3.5, MyBatis, MySQL 8 기반 웹 애플리케이션입니�
 브라우저 통합 테스트는 독립적인 테스트 서버를 실행한 뒤 `npm install` 및 `npm run test:ui`로 실행합니다. 기본 주소는 `http://127.0.0.1:8081`, 브라우저는 설치된 Microsoft Edge이며 DOA_UI_URL과 DOA_BROWSER_CHANNEL 환경 변수로 변경할 수 있습니다. 테스트 안에서는 엔화 계산을 재현하기 위해 환율 응답을 고정하지만 실제 사이트의 환율은 외부 API로 조회합니다. 이 테스트도 테스트 계정·게시물·주문을 생성하므로 운영 서버에서 실행하지 마세요.
 
 외부 공개 시 HTTPS와 COOKIE_SECURE=true, 실제 PUBLIC_URL, SMTP 설정을 적용해야 합니다. 결제 PG, Instagram, 관리자 상품관리, 실시간 푸시 알림은 이 버전에 포함하지 않습니다.
-# 3D fitting studio
+## 3D 피팅 검토 보류
 
-Open `#fitting` from the navigation or a product's 3D fitting link. A procedural mannequin supports height, weight, shoulder and waist controls; category-based clothes use real catalogue selections and available variant colours. Drag, keyboard arrows, angle slider, preset views, zoom and automatic rotation work locally in WebGL. Three.js 0.170.0 is bundled with its MIT license, with no paid API calls or photo uploads.
-
-This is an approximate styling preview, not a garment digital twin, body scan, cloth simulation or size recommendation. The procedural mesh represents category silhouettes rather than exact product construction. Settings stay in memory during the current page session. Precise product rendering requires per-product 3D garment assets and measured size data.
+3D 피팅 기능은 데이터 준비 후 재검토합니다. 준비 자료와 구현 방향은 docs/3D-가상피팅-준비노트.md에 저장했습니다.
