@@ -1,5 +1,8 @@
 # DOA home campaign
 
+Current asset: `doa-campaign-hero-v2.png`. Built-in imagegen edit, 2026-10-13. Original preserved. Edit prompt:
+Edit this existing DOA campaign photograph only to refine the adult model's anatomical proportions. Reduce the head including hair silhouette by about 12 percent relative to the shoulders; lengthen legs naturally about 10 percent by raising hip/crotch line slightly and adjusting the torso proportion, keeping both shoes within the frame. Aim for believable elegant fashion-model proportions, not exaggerated elongated anatomy. Preserve the same fictional adult Korean woman's facial identity, downward sideways gaze, pose, black asymmetric top, washed blue flared jeans, fabric seam details, shoes, silver metal wall, lighting, framing, empty left space and overall photograph. Smooth anatomically correct neck and shoulders, hips, knees and ankles; no warped garment or background. No added text or logo.
+
 Asset: `doa-campaign-hero.png`. Generated with the built-in imagegen tool, 2026-10-13. Fictional adult Korean model. Visual reference: https://ordes.co.kr/ (industrial silver background, asymmetric black top and blue denim). Original generated photography; no source photo or logo copied.
 
 Prompt:
