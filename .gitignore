@@ -1,0 +1,11 @@
+target/
+.tools/
+.data/
+.env
+uploads/
+test-results/
+.idea/
+.classpath
+.project
+.settings/
+node_modules/

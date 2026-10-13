@@ -112,7 +112,7 @@ const jaMessages={
   "옷은 자신의 취향을 표현하는 매개체입니다. 정해진 답 대신, 각자의 감각을 발견하고 자유롭게 표현하는 공간. 패션에서 시작된 작은 취향이 사람과 사람을 연결하고 하나의 문화로 이어집니다.": "服は、自分の好みを表現するもの。決まった正解ではなく、一人ひとりが自分の感覚を見つけ、自由に表現できる場所。ファッションから始まる小さな好みが、人と人をつなぎ、ひとつの文化へと広がっていきます。",
   "우리의 커뮤니티 만나기": "コミュニティを見る",
   "배송 · 교환 · 반품 안내는 상품 상세에서 확인할 수 있습니다.": "配送・交換・返品のご案内は商品詳細でご確認いただけます。",
-  "이 사이트는 개발 초안을 바탕으로 제작한 UI 프로토타입입니다.": "このサイトは開発案をもとに制作したUIプロトタイプです。",
+  "이 사이트는 개발 초안을 바탕으로 제작한 포트폴리오 쇼핑몰입니다. 실제 결제는 진행되지 않습니다.": "このサイトは開発案をもとに制作したポートフォリオ用ショップです。実際の決済は行われません。",
   "새로운 취향이 시작되는 문 · DOA 2026 COLLECTION": "新しい好みへの扉 · DOA 2026 COLLECTION",
   "옷에서 시작되는 취향, 사람으로 이어지는 감각.": "服から始まる好み、人へとつながる感覚。",
   "시연용 UI · 실제 주문 및 결제는 진행되지 않습니다.": "デモ用UI · 実際の注文・決済は行われません。",
@@ -206,6 +206,7 @@ const jaProductNames={
   "Leather belt": "レザーベルト",
   "Soft knit scarf": "ソフトニットマフラー"
 };
+Object.assign(jaMessages,{"알림": "通知", "영업일 평균": "営業日平均", "최근 저장된 환율": "保存済みのレート", "이번 달 환율을 불러오지 못해 원화로 표시합니다.": "今月の為替レートを取得できないため、韓国ウォンで表示しています。", "로그인이 필요합니다.": "ログインが必要です。", "요청이 만료되었습니다. 새로고침 후 다시 시도하세요.": "リクエストが期限切れです。再読み込みしてください。", "요청을 처리하지 못했습니다.": "リクエストを処理できませんでした。", "품절": "在庫切れ", "재고": "在庫", "이상 무료배송": "以上で送料無料", "아이디 중복 확인": "IDの重複確認", "사용 가능한 아이디입니다.": "使用できるIDです。", "이미 사용 중인 아이디입니다.": "このIDは使用されています。", "좋아요한 Outfit": "いいねしたコーディネート", "게시물이 없습니다.": "投稿はありません。", "모두 읽음": "すべて既読にする", "새 알림이 없습니다.": "新しい通知はありません。", "좋아요": "いいね", "답글": "返信", "댓글": "コメント", "안내 메일 받기": "案内メールを受け取る", "가입된 이메일이면 안내 메일을 발송했습니다.": "登録済みのメールアドレスの場合、ご案内を送信しました。", "비밀번호 변경": "パスワード変更", "비밀번호가 변경되었습니다. 다시 로그인하세요.": "パスワードを変更しました。再度ログインしてください。", "실제 결제는 진행되지 않습니다.": "実際の決済は行われません。", "주문 등록": "注文を登録", "주문이 저장되었습니다.": "注文を保存しました。", "댓글과 해당 답글을 삭제할까요?": "コメントとその返信を削除しますか？", "이미지를 읽을 수 없습니다.": "画像を読み込めません。", "서버에 연결하는 중입니다.": "サーバーに接続しています。", "서버에 연결하지 못했습니다.": "サーバーに接続できませんでした。", "Spring Boot 서버 주소에서 사이트를 열어주세요.": "Spring BootサーバーのURLからサイトを開いてください。", "다시 시도": "再試行", "포트폴리오 쇼핑몰 · 실제 결제는 진행되지 않습니다.": "ポートフォリオ用ショップ · 実際の決済は行われません。", "아이디 또는 비밀번호를 확인하세요.": "IDまたはパスワードを確認してください。", "필수 항목과 입력 형식·길이를 확인하세요.": "必須項目、入力形式、文字数を確認してください。", "이미 사용 중인 아이디 또는 이메일입니다.": "このIDまたはメールアドレスは使用されています。", "아이디는 영문·숫자·밑줄 4~50자로 입력하세요.": "IDは半角英数字とアンダースコア4〜50文字で入力してください。", "메일 발송을 사용할 수 없습니다. 관리자에게 문의하세요.": "メールを送信できません。管理者にお問い合わせください。", "만료되었거나 사용할 수 없는 링크입니다.": "期限切れまたは無効なリンクです。", "작성자만 변경할 수 있습니다.": "投稿者のみ変更できます。", "잠시 후 다시 시도하세요.": "しばらくしてから再試行してください。", "재고가 부족합니다. 장바구니를 확인하세요.": "在庫が不足しています。カートを確認してください。", "재고가 부족합니다.": "在庫が不足しています。", "재고보다 많은 수량을 담을 수 없습니다.": "在庫数を超える数量は追加できません。"});
 let language='ko';
 try { language=localStorage.getItem('doa-language')==='ja'?'ja':'ko'; } catch {}
 const translationKeys=Object.keys(jaMessages).sort((a,b)=>b.length-a.length);
@@ -213,6 +214,6 @@ const escapePattern=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const translationPattern=new RegExp(translationKeys.map(escapePattern).join('|'),'g');
 function t(key){if(language!=='ja')return key;return jaMessages[key] ?? key.replace(translationPattern,match=>jaMessages[match]);}
 function productName(p){if(!p)return '';if(language!=='ja')return p.name;const [name,...suffix]=p.name.split(' / ');return (jaProductNames[name]||name)+(suffix.length?' / '+suffix.join(' / '):'');}
-function postTitle(p){return !p.mine&&p.id<=3?t(p.title):p.title;}
-function postText(p){return !p.mine&&p.id<=3?t(p.text):p.text;}
+function postTitle(p){return p.title;}
+function postText(p){return p.text;}
 function translateShell(){document.documentElement.lang=language;document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>el.placeholder=t(el.dataset.i18nPlaceholder));document.querySelectorAll('[data-i18n-label]').forEach(el=>el.setAttribute('aria-label',t(el.dataset.i18nLabel)));document.querySelector('#language').value=language;document.querySelector('#language').setAttribute('aria-label',language==='ja'?'言語を選択':'언어 선택');}
