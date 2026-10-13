@@ -42,7 +42,14 @@ async function main(){
     await b.goto(base+'/#account/likes');await b.getByText('UI outfit '+suffix,{exact:true}).waitFor();
     await a.goto(base+'/#account/info');await a.locator('#logout').click();await a.locator('.hero').waitFor();
     await a.goto(base+'/#login');await a.locator('#login-form').waitFor();await a.locator('[name=id]').fill('alpha'+suffix);await a.locator('[name=password]').fill('Password123!');await a.locator('#login-form button.primary').click();await a.locator('#logout').waitFor();
-    await a.setViewportSize({width:390,height:844});await a.goto(base+'/#shop');await a.locator('.grid').waitFor();assert(await a.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth));
+    await a.goto(base+'/#shop');await a.locator('.grid').waitFor();
+    for(const width of [1440,968,720,390,360]){
+      await a.setViewportSize({width,height:844});
+      await a.waitForFunction(()=>[...document.querySelectorAll('.product img')].every(img=>img.complete&&img.naturalWidth>0));
+      assert(await a.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth));
+      assert(await a.locator('.product .image').evaluateAll(els=>els.every(el=>el.getBoundingClientRect().height>100)));
+    }
+    await a.setViewportSize({width:390,height:844});
     fs.mkdirSync('test-results',{recursive:true});await a.screenshot({path:'test-results/mobile-shop.png',fullPage:true});
     await a.setViewportSize({width:1440,height:1000});await a.locator('#language').selectOption('ja');await a.screenshot({path:'test-results/japanese-shop.png',fullPage:true});
     const c=await page();await c.locator('#language').selectOption('ja');await signup(c,'japan'+suffix,true);
